@@ -39,8 +39,8 @@ export function initTable(settings, onAction) {
   });
 
   const render = (data) => {
-    
-    const nextRows = [
+
+    const nextRows =
       data.map((item) => {
         const row = cloneTemplate(rowTemplate);
         Object.keys(item).forEach((key) => {
@@ -49,8 +49,7 @@ export function initTable(settings, onAction) {
           }
         });
         return row.container;
-      })
-    ];
+      });
     root.elements.rows.replaceChildren(...nextRows);
   };
 
